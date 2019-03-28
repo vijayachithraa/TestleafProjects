@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [Suite]">
+  <parameter name="uName" value="DemoSalesManager"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="pwd" value="crmsfa"/>
+  <parameter name="URL" value="http://leaftaps.com/opentaps"/>
+  <test verbose="10" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <include name="common"/>
+        <include name="sanity"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testCases.DuplicateLeadWD">
+        <methods>
+          <include name="login"/>
+          <include name="duplicateLead"/>
+        </methods>
+      </class> <!-- testCases.DuplicateLeadWD -->
+      <class name="testCases.CreateLeadWD">
+        <methods>
+          <include name="createLead"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- testCases.CreateLeadWD -->
+      <class name="testCases.DeleteLeadWD">
+        <methods>
+          <include name="deleteLead" invocation-numbers="0"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- testCases.DeleteLeadWD -->
+      <class name="testCases.EditLeadWD">
+        <methods>
+          <include name="editLead"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- testCases.EditLeadWD -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
